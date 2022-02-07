@@ -15,11 +15,11 @@ The data of interest is historical price data of a crypto asset called Algorand,
 
 # Architecture Design
 
-IMAGE OF DESIGN
+![Alt_text](https://github.com/Tcfocus/ml_price_prediction_airflow_pysparkml_emr/blob/main/assets/images/architecture.jpg)
 
 # Airflow ETL
 
-IMAGE OF ETL
+![Alt text](https://github.com/Tcfocus/ml_price_prediction_airflow_pysparkml_emr/blob/main/assets/images/AirflowDesign.jpg)
 
 ### ETL Steps
    1. Access the source data and the main script for the linear regression model, and move it to S3.
