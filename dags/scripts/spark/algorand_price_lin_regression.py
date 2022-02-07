@@ -10,7 +10,7 @@ from pyspark.sql.window import Window
 import pandas as pd
 import ta
 
-#function for calculating RSI from price
+# function for calculating RSI from price
 def getRsi(x):
     ta_rsi = ta.momentum.RSIIndicator(close=x, window=14)
     return ta_rsi.rsi()
@@ -32,7 +32,7 @@ def linear_regression_prediction(input_location, output_location):
     a = lead(col("price")).over(window)
     final_df = df_input_ta.withColumn("next_price", a).dropna(how="any")
 
-    # Prepare data for Machine Learning by establishing features and label ("new_step) columns
+    # Prepare data for Machine Learning by establishing features and label ("new_step") columns
     feature = VectorAssembler(inputCols=['price', 'volume', 'marketCap', 'rsi'], outputCol='features')
     final_ml_data = feature.transform(final_df)
 
