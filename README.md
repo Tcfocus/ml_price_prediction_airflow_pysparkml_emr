@@ -34,7 +34,7 @@ Often times, data and scripts are already existing in the Cloud in locations suc
 Three spark steps are added to the cluster, which copy the S3 data into the clusters HDFS location, run the linear regression script, and copies the output from the HDFS location to the final S3 location.
 
 
-# Script for data transformation
+# Data transformation and machine learning model
 
 The algorand_price_lin_regression.py script contains the code that is applied to the input CSV data. The data is read from the CSV, and a RSI value is calculated using the TA module. A column is calculated containing the next day's price, which is used as the label for the model. 
 
